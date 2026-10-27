@@ -19,7 +19,7 @@ export function AppointmentGrid({
     <div className="grid gap-5 lg:grid-cols-3">
       {appointments.map((appointment) => (
         <article key={appointment.title} className={`${cardClass} p-6`}>
-          <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-[color:var(--brand-blue)]/10 text-[color:var(--brand-blue)]">
+          <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
             <CalendarDays className="h-6 w-6" />
           </div>
           <h3 className="mb-2 text-xl leading-tight font-semibold text-[color:var(--brand-ink)]">
@@ -27,13 +27,13 @@ export function AppointmentGrid({
           </h3>
           <p className={`${bodyCopyClass} mb-5`}>{appointment.summary}</p>
 
-          <div className="grid gap-3 text-sm text-slate-600">
+          <div className="grid gap-3 text-sm text-[color:var(--brand-copy)]">
             <div className="flex items-center gap-2">
-              <Clock3 className="h-4 w-4 text-[color:var(--brand-blue)]" />
+              <Clock3 className="h-4 w-4 text-[color:var(--brand-primary)]" />
               <span>{appointment.timing}</span>
             </div>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-[color:var(--brand-blue)]" />
+              <ShieldCheck className="h-4 w-4 text-[color:var(--brand-primary)]" />
               <span>{appointment.format}</span>
             </div>
           </div>

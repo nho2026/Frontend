@@ -5,7 +5,7 @@ export function ProgramsPage() {
     <>
       <section className={pageBannerClass}>
         <div className={`${shellClass} grid max-w-180 gap-4.5`}>
-          <p className="m-0 text-[0.84rem] font-bold uppercase text-[color:var(--brand-blue)]">
+          <p className="m-0 text-[0.84rem] font-bold uppercase text-[color:var(--brand-primary)]">
             Programs
           </p>
           <h1 className="m-0 max-w-[10ch] text-5xl leading-[1.08] font-semibold text-[color:var(--brand-ink)] md:text-7xl">

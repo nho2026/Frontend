@@ -52,7 +52,7 @@ export function BookingForm() {
   return (
     <article className={`${cardClass} grid gap-5 p-6`}>
       <div className="grid gap-2">
-        <p className="text-[0.84rem] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-blue)]">
+        <p className="text-[0.84rem] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-primary)]">
           {bookingForm.eyebrow}
         </p>
         <h3 className="text-[1.8rem] font-semibold text-[color:var(--brand-ink)]">
@@ -77,8 +77,8 @@ export function BookingForm() {
                 onClick={() => setSelectedDate(item.date)}
                 className={`inline-flex min-h-10 items-center rounded-full border px-3.5 text-sm font-medium transition duration-200 ${
                   isActive
-                    ? 'border-transparent bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-teal))] text-white shadow-[0_12px_22px_rgba(15,87,115,0.18)]'
-                    : 'border-[color:var(--brand-line)] bg-white text-slate-600 hover:bg-[color:var(--brand-blue)]/8'
+                    ? 'border-transparent bg-[linear-gradient(135deg,var(--brand-primary),var(--brand-primary-deep))] text-white shadow-[0_12px_22px_rgba(192,34,39,0.18)]'
+                    : 'border-[color:var(--brand-line)] bg-white text-[color:var(--brand-copy)] hover:bg-[color:var(--brand-primary)]/8'
                 }`}
               >
                 {item.label}
@@ -95,14 +95,14 @@ export function BookingForm() {
           </span>
           <span className="relative">
             <User
-              className={`pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--brand-blue)] ${isRTL ? 'right-4' : 'left-4'}`}
+              className={`pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--brand-primary)] ${isRTL ? 'right-4' : 'left-4'}`}
             />
             <input
               type="text"
               value={name}
               onChange={(event) => setName(event.target.value)}
               placeholder={bookingForm.namePlaceholder}
-              className={`min-h-12 w-full rounded-[18px] border border-[color:var(--brand-line)] bg-white text-sm text-[color:var(--brand-ink)] shadow-[0_10px_22px_rgba(16,38,58,0.06)] outline-none transition duration-200 placeholder:text-slate-400 focus:border-[color:var(--brand-blue)] ${isRTL ? 'pr-11 pl-4 text-right' : 'pl-11 pr-4 text-left'}`}
+              className={`min-h-12 w-full rounded-[18px] border border-[color:var(--brand-line)] bg-white text-sm text-[color:var(--brand-ink)] shadow-[0_10px_22px_rgba(14,55,39,0.06)] outline-none transition duration-200 placeholder:text-slate-400 focus:border-[color:var(--brand-primary)] ${isRTL ? 'pr-11 pl-4 text-right' : 'pl-11 pr-4 text-left'}`}
               required
             />
           </span>
@@ -114,14 +114,14 @@ export function BookingForm() {
           </span>
           <span className="relative">
             <Phone
-              className={`pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--brand-blue)] ${isRTL ? 'right-4' : 'left-4'}`}
+              className={`pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--brand-primary)] ${isRTL ? 'right-4' : 'left-4'}`}
             />
             <input
               type="tel"
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
               placeholder={bookingForm.phonePlaceholder}
-              className={`min-h-12 w-full rounded-[18px] border border-[color:var(--brand-line)] bg-white text-sm text-[color:var(--brand-ink)] shadow-[0_10px_22px_rgba(16,38,58,0.06)] outline-none transition duration-200 placeholder:text-slate-400 focus:border-[color:var(--brand-blue)] ${isRTL ? 'pr-11 pl-4 text-right' : 'pl-11 pr-4 text-left'}`}
+              className={`min-h-12 w-full rounded-[18px] border border-[color:var(--brand-line)] bg-white text-sm text-[color:var(--brand-ink)] shadow-[0_10px_22px_rgba(14,55,39,0.06)] outline-none transition duration-200 placeholder:text-slate-400 focus:border-[color:var(--brand-primary)] ${isRTL ? 'pr-11 pl-4 text-right' : 'pl-11 pr-4 text-left'}`}
               required
             />
           </span>
@@ -138,7 +138,7 @@ export function BookingForm() {
                 className={`w-full justify-between rounded-[18px] px-4 ${isRTL ? 'text-right' : 'text-left'}`}
               >
                 <span className="flex items-center gap-3">
-                  <CalendarDays className="h-4 w-4 text-[color:var(--brand-blue)]" />
+                  <CalendarDays className="h-4 w-4 text-[color:var(--brand-primary)]" />
                   {selectedDate ? (
                     formatDate(selectedDate, { dateStyle: 'full' })
                   ) : (
@@ -174,8 +174,8 @@ export function BookingForm() {
       </form>
 
       {submitted ? (
-        <div className="flex items-start gap-3 rounded-[20px] border border-[color:var(--brand-teal)]/20 bg-[color:var(--brand-teal)]/8 px-4 py-3 text-sm text-[color:var(--brand-ink)]">
-          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--brand-teal)]" />
+        <div className="flex items-start gap-3 rounded-[20px] border border-[color:var(--brand-green)]/20 bg-[color:var(--brand-green)]/8 px-4 py-3 text-sm text-[color:var(--brand-ink)]">
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--brand-green)]" />
           <span>{bookingForm.success}</span>
         </div>
       ) : null}

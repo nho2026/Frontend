@@ -13,7 +13,7 @@ export function Timeline({ items }: TimelineProps) {
           key={item.year}
           className={`${cardClass} grid gap-6 p-6 md:grid-cols-[110px_1fr]`}
         >
-          <p className="m-0 text-[0.88rem] font-bold text-[color:var(--brand-blue)]">
+          <p className="m-0 text-[0.88rem] font-bold text-[color:var(--brand-primary)]">
             {item.year}
           </p>
           <div>

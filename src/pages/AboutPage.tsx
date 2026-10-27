@@ -1,6 +1,6 @@
-import { HeartPulse, ShieldCheck, Users } from 'lucide-react'
-import logoImage from '../assets/Logo.png'
-import { SectionHeading } from '../components/SectionHeading'
+import { HeartPulse, ShieldCheck, Users } from "lucide-react";
+import logoImage from "../assets/brand-logo.svg";
+import { SectionHeading } from "../components/SectionHeading";
 import {
   bodyCopyClass,
   cardClass,
@@ -8,12 +8,12 @@ import {
   sectionClass,
   shellClass,
   splitLayoutClass,
-} from '../components/ui/ui'
-import { useI18n } from '../i18n'
+} from "../components/ui/ui";
+import { useI18n } from "../i18n";
 
 export function AboutPage() {
-  const { content } = useI18n()
-  const { about } = content
+  const { content } = useI18n();
+  const { about } = content;
 
   const missionCards = [
     {
@@ -28,14 +28,14 @@ export function AboutPage() {
       icon: ShieldCheck,
       ...about.missionCards[2],
     },
-  ]
+  ];
 
   return (
     <>
       <section className={pageBannerClass}>
         <div className={`${shellClass} ${splitLayoutClass} items-start`}>
           <div className="grid max-w-[680px] gap-5">
-            <p className="m-0 text-[0.84rem] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-blue)]">
+            <p className="m-0 text-[0.84rem] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-primary)]">
               {about.heroEyebrow}
             </p>
             <h1 className="m-0 max-w-[11ch] text-[3rem] leading-[0.98] font-semibold text-[color:var(--brand-ink)] md:text-[4.8rem]">
@@ -45,7 +45,7 @@ export function AboutPage() {
           </div>
 
           <div className={`${cardClass} flex items-center gap-4 p-5`}>
-            <span className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-[24px] border border-[color:var(--brand-line)] bg-white shadow-[0_16px_28px_rgba(18,38,63,0.1)]">
+            <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-[24px] border border-[color:var(--brand-line)] bg-white shadow-[0_16px_28px_rgba(14,55,39,0.1)]">
               <img
                 src={logoImage}
                 alt="Nadir Health Organization logo"
@@ -53,7 +53,7 @@ export function AboutPage() {
               />
             </span>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-blue)]">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-primary)]">
                 {about.brandPrincipleLabel}
               </p>
               <p className="mt-2 text-base font-medium text-[color:var(--brand-ink)]">
@@ -75,7 +75,7 @@ export function AboutPage() {
           <div className="grid gap-4">
             {missionCards.map(({ icon: Icon, title, body }) => (
               <article key={title} className={`${cardClass} p-5`}>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[color:var(--brand-blue)]/10 text-[color:var(--brand-blue)]">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-[color:var(--brand-ink)]">
@@ -105,5 +105,5 @@ export function AboutPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -26,7 +26,7 @@ export function StaffPage() {
     <>
       <section className={pageBannerClass}>
         <div className={`${shellClass} grid max-w-205 gap-4.5`}>
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-(--brand-line) bg-white/80 px-4 py-2 text-sm font-semibold text-(--brand-blue)">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-(--brand-line) bg-white/80 px-4 py-2 text-sm font-semibold text-(--brand-primary)">
             <HeartPulse className="h-4 w-4" />
             {staff.heroBadge}
           </div>
@@ -67,14 +67,14 @@ export function StaffPage() {
 
           <div className="grid gap-5">
             <article className={`${cardClass} p-6`}>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-(--brand-teal)/10 px-3 py-1 text-sm font-semibold text-(--brand-teal)">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-(--brand-green)/10 px-3 py-1 text-sm font-semibold text-(--brand-green)">
                 <HeartPulse className="h-4 w-4" />
                 {staff.scopeBadge}
               </div>
               <p className={bodyCopyClass}>{staff.scopeBody}</p>
             </article>
             <article className={`${cardClass} p-6`}>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-(--brand-blue)">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-(--brand-primary)">
                 {staff.bookingFlow}
               </p>
               <ul className="mt-4 grid gap-3 text-sm text-slate-700">
@@ -84,7 +84,7 @@ export function StaffPage() {
               </ul>
               <button
                 type="button"
-                className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-teal))] px-5.5 font-semibold text-white shadow-[0_16px_32px_rgba(17,91,166,0.22)] transition duration-200 hover:-translate-y-0.5"
+                className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--brand-primary),var(--brand-primary-deep))] px-5.5 font-semibold text-white shadow-[0_16px_32px_rgba(192,34,39,0.22)] transition duration-200 hover:-translate-y-0.5"
                 onClick={() => navigateTo('/contact')}
               >
                 {staff.requestAppointment}

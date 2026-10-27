@@ -11,7 +11,7 @@ export function StatStrip({ items }: StatStripProps) {
       {items.map((item) => (
         <article
           key={item.label}
-          className="rounded-[24px] border border-[color:var(--brand-line)] bg-white/86 p-6 shadow-[0_20px_42px_rgba(18,38,63,0.08)]"
+          className="rounded-[24px] border border-[color:var(--brand-line)] bg-white/86 p-6 shadow-[0_20px_42px_rgba(14,55,39,0.08)]"
         >
           <p className="mb-3 text-[2.6rem] leading-none font-bold text-[color:var(--brand-ink)]">
             {item.value}
